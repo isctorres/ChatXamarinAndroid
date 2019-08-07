@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="#FFF">
+        
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:id="@+id/lytMensaje"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/txtUsuarioRecibido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF6F00"
+            android:textColor="#CCFFCC"
+            android:textSize="15dip"
+            android:textStyle="italic"
+            android:layout_gravity="left"
+            android:layout_marginRight="40dp"
+            android:text="usuario"
+        />
+
+        <com.github.library.bubbleview.BubbleTextView
+            android:id="@+id/txtMensajeRecibido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="14dp"
+            android:textColor="#FFF"
+            android:padding="10dp"
+            app:arrowWidth="8dp"
+            app:arrowHeight="8dp"
+            app:angle="8dp"
+            app:arrowPosition="14dp"
+            app:arrowLocation="left"
+            app:bubbleColor="#333639"
+            app:arrowCenter="true"
+        />
+    </LinearLayout>
+
+</LinearLayout>
