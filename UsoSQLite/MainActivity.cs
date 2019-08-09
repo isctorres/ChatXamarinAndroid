@@ -14,6 +14,7 @@ using Android.Preferences;
 using Android.Content;
 using Android.Support.Design.Widget;
 using System;
+using Android.Views;
 
 namespace UsoSQLite
 {
@@ -46,10 +47,38 @@ namespace UsoSQLite
             initList();
             fabEnviar.Click += (sender, e) => insMensaje();
             
-            ltvMensajes.ItemClick += (sender, e) =>
+            ltvMensajes.ItemLongClick += (sender, e) =>
             {
-                Toast.MakeText(this, lstMensajes[e.Position].mensaje, ToastLength.Short).Show();
+                var objMensaje = lstMensajes[e.Position];
+
+                FragmentTransaction ft = FragmentManager.BeginTransaction();
+                //Remove fragment else it will crash as it is already added to backstack
+                Fragment prev = FragmentManager.FindFragmentByTag("dialog");
+                if (prev != null)
+                {
+                    ft.Remove(prev);
+                }
+
+                ft.AddToBackStack(null);
+
+                // Create and show the dialog.
+                DetalleMensajeFragment newFragment = new DetalleMensajeFragment(objMensaje);
+
+                //Add fragment
+                newFragment.Show(ft, "dialog");
             };
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.menu_chat, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            Finish();
+            return base.OnOptionsItemSelected(item);
         }
 
         private void initList()
@@ -64,34 +93,34 @@ namespace UsoSQLite
                 {
                     List<Mensaje> mensajes = new List<Mensaje> {
                         new Mensaje {
-                            usuario = "Luis", mensaje="hola como estas?", recibido=true
+                            usuario = "Luis", mensaje="hola como estas?", recibido=true, fecha = DateTime.Now
                         },
                         new Mensaje {
-                            usuario = "Pedro", mensaje="bien y tu que tal, que cuentas?", recibido=false
+                            usuario = "Pedro", mensaje="bien y tu que tal, que cuentas?", recibido=false, fecha = DateTime.Now
                         },
                         new Mensaje {
-                            usuario = "Luis", mensaje="hola 2", recibido=true
+                            usuario = "Luis", mensaje="hola 2", recibido=true, fecha = DateTime.Now
                         },
                         new Mensaje {
-                            usuario = "Pedro", mensaje="hola 2", recibido=false
+                            usuario = "Pedro", mensaje="hola 2", recibido=false, fecha = DateTime.Now
                         },
                         new Mensaje {
-                            usuario = "Luis", mensaje="hola 3", recibido=true
+                            usuario = "Luis", mensaje="hola 3", recibido=true, fecha = DateTime.Now
                         },
                         new Mensaje {
-                            usuario = "Pedro", mensaje="hola 3", recibido=false
+                            usuario = "Pedro", mensaje="hola 3", recibido=false, fecha = DateTime.Now
                         },
                         new Mensaje {
-                            usuario = "Luis", mensaje="hola 4", recibido=true
+                            usuario = "Luis", mensaje="hola 4", recibido=true, fecha = DateTime.Now
                         },
                         new Mensaje {
-                            usuario = "Pedro", mensaje="hola 4", recibido=false
+                            usuario = "Pedro", mensaje="hola 4", recibido=false, fecha = DateTime.Now
                         },
                         new Mensaje {
-                            usuario = "Luis", mensaje="hola 5", recibido=true
+                            usuario = "Luis", mensaje="hola 5", recibido=true, fecha = DateTime.Now
                         },
                         new Mensaje {
-                            usuario = "Pedro", mensaje="hola 5", recibido=false
+                            usuario = "Pedro", mensaje="hola 5", recibido=false, fecha = DateTime.Now
                         },
                     };
                     connection.InsertAll(mensajes);

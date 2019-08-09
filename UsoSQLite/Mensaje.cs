@@ -26,7 +26,7 @@ namespace UsoSQLite.Modelo
 
         [MaxLength(100), NotNull]
         public string mensaje { get; set; }
-
+        public DateTime fecha { get; set; }
         public bool recibido { get; set; }
     }
 }

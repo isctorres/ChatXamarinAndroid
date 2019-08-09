@@ -3487,6 +3487,9 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a003a
 			public const int CTRL = 2131361850;
 			
+			// aapt resource value: 0x7f0a00b9
+			public const int CloseButton = 2131361977;
+			
 			// aapt resource value: 0x7f0a003b
 			public const int FUNCTION = 2131361851;
 			
@@ -3520,17 +3523,17 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a0069
 			public const int action_bar_title = 2131361897;
 			
-			// aapt resource value: 0x7f0a00ba
-			public const int action_container = 2131361978;
+			// aapt resource value: 0x7f0a00bd
+			public const int action_container = 2131361981;
 			
 			// aapt resource value: 0x7f0a008e
 			public const int action_context_bar = 2131361934;
 			
-			// aapt resource value: 0x7f0a00c5
-			public const int action_divider = 2131361989;
+			// aapt resource value: 0x7f0a00c8
+			public const int action_divider = 2131361992;
 			
-			// aapt resource value: 0x7f0a00bb
-			public const int action_image = 2131361979;
+			// aapt resource value: 0x7f0a00be
+			public const int action_image = 2131361982;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -3547,11 +3550,11 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a006b
 			public const int action_mode_close_button = 2131361899;
 			
-			// aapt resource value: 0x7f0a00bc
-			public const int action_text = 2131361980;
+			// aapt resource value: 0x7f0a00bf
+			public const int action_text = 2131361983;
 			
-			// aapt resource value: 0x7f0a00c6
-			public const int actions = 2131361990;
+			// aapt resource value: 0x7f0a00c9
+			public const int actions = 2131361993;
 			
 			// aapt resource value: 0x7f0a006c
 			public const int activity_chooser_view_content = 2131361900;
@@ -3616,8 +3619,8 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a0086
 			public const int checkbox = 2131361926;
 			
-			// aapt resource value: 0x7f0a00c4
-			public const int chronometer = 2131361988;
+			// aapt resource value: 0x7f0a00c7
+			public const int chronometer = 2131361991;
 			
 			// aapt resource value: 0x7f0a0061
 			public const int clip_horizontal = 2131361889;
@@ -3736,8 +3739,8 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a00b4
 			public const int icon_frame = 2131361972;
 			
-			// aapt resource value: 0x7f0a00c7
-			public const int icon_group = 2131361991;
+			// aapt resource value: 0x7f0a00ca
+			public const int icon_group = 2131361994;
 			
 			// aapt resource value: 0x7f0a0041
 			public const int ifRoom = 2131361857;
@@ -3745,14 +3748,17 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a006e
 			public const int image = 2131361902;
 			
-			// aapt resource value: 0x7f0a00c0
-			public const int info = 2131361984;
+			// aapt resource value: 0x7f0a00c3
+			public const int info = 2131361987;
 			
 			// aapt resource value: 0x7f0a0068
 			public const int italic = 2131361896;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int item_touch_helper_previous_elevation = 2131361792;
+			
+			// aapt resource value: 0x7f0a00d2
+			public const int itmSalir = 2131362002;
 			
 			// aapt resource value: 0x7f0a004e
 			public const int labeled = 2131361870;
@@ -3778,11 +3784,11 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a00a0
 			public const int ltvMensajes = 2131361952;
 			
-			// aapt resource value: 0x7f0a00b5
-			public const int lytMensaje = 2131361973;
+			// aapt resource value: 0x7f0a00ba
+			public const int lytMensaje = 2131361978;
 			
-			// aapt resource value: 0x7f0a00ce
-			public const int masked = 2131361998;
+			// aapt resource value: 0x7f0a00d1
+			public const int masked = 2131362001;
 			
 			// aapt resource value: 0x7f0a009c
 			public const int message = 2131361948;
@@ -3814,14 +3820,14 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a0025
 			public const int normal = 2131361829;
 			
-			// aapt resource value: 0x7f0a00c2
-			public const int notification_background = 2131361986;
+			// aapt resource value: 0x7f0a00c5
+			public const int notification_background = 2131361989;
 			
-			// aapt resource value: 0x7f0a00be
-			public const int notification_main_column = 2131361982;
+			// aapt resource value: 0x7f0a00c1
+			public const int notification_main_column = 2131361985;
 			
-			// aapt resource value: 0x7f0a00bd
-			public const int notification_main_column_container = 2131361981;
+			// aapt resource value: 0x7f0a00c0
+			public const int notification_main_column_container = 2131361984;
 			
 			// aapt resource value: 0x7f0a0060
 			public const int outline = 2131361888;
@@ -3847,17 +3853,17 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a0087
 			public const int radio = 2131361927;
 			
-			// aapt resource value: 0x7f0a00c9
-			public const int recycler_view = 2131361993;
+			// aapt resource value: 0x7f0a00cc
+			public const int recycler_view = 2131361996;
 			
 			// aapt resource value: 0x7f0a0055
 			public const int right = 2131361877;
 			
-			// aapt resource value: 0x7f0a00c1
-			public const int right_icon = 2131361985;
+			// aapt resource value: 0x7f0a00c4
+			public const int right_icon = 2131361988;
 			
-			// aapt resource value: 0x7f0a00bf
-			public const int right_side = 2131361983;
+			// aapt resource value: 0x7f0a00c2
+			public const int right_side = 2131361986;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int save_image_matrix = 2131361804;
@@ -3916,11 +3922,11 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a009a
 			public const int search_voice_btn = 2131361946;
 			
-			// aapt resource value: 0x7f0a00ca
-			public const int seekbar = 2131361994;
+			// aapt resource value: 0x7f0a00cd
+			public const int seekbar = 2131361997;
 			
-			// aapt resource value: 0x7f0a00cb
-			public const int seekbar_value = 2131361995;
+			// aapt resource value: 0x7f0a00ce
+			public const int seekbar_value = 2131361998;
 			
 			// aapt resource value: 0x7f0a009b
 			public const int select_dialog_listview = 2131361947;
@@ -3958,8 +3964,8 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a0073
 			public const int spacer = 2131361907;
 			
-			// aapt resource value: 0x7f0a00c8
-			public const int spinner = 2131361992;
+			// aapt resource value: 0x7f0a00cb
+			public const int spinner = 2131361995;
 			
 			// aapt resource value: 0x7f0a0008
 			public const int split_action_bar = 2131361800;
@@ -3985,8 +3991,8 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a0098
 			public const int submit_area = 2131361944;
 			
-			// aapt resource value: 0x7f0a00cc
-			public const int switchWidget = 2131361996;
+			// aapt resource value: 0x7f0a00cf
+			public const int switchWidget = 2131361999;
 			
 			// aapt resource value: 0x7f0a0026
 			public const int tabMode = 2131361830;
@@ -4027,8 +4033,8 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a001a
 			public const int textinput_helper_text = 2131361818;
 			
-			// aapt resource value: 0x7f0a00c3
-			public const int time = 2131361987;
+			// aapt resource value: 0x7f0a00c6
+			public const int time = 2131361990;
 			
 			// aapt resource value: 0x7f0a0023
 			public const int title = 2131361827;
@@ -4063,20 +4069,26 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a0013
 			public const int transition_transform = 2131361811;
 			
+			// aapt resource value: 0x7f0a00b6
+			public const int txtFecha = 2131361974;
+			
 			// aapt resource value: 0x7f0a009f
 			public const int txtHeader = 2131361951;
 			
 			// aapt resource value: 0x7f0a00b7
-			public const int txtMensaje = 2131361975;
-			
-			// aapt resource value: 0x7f0a00b9
-			public const int txtMensajeRecibido = 2131361977;
-			
-			// aapt resource value: 0x7f0a00b6
-			public const int txtUsuario = 2131361974;
+			public const int txtHora = 2131361975;
 			
 			// aapt resource value: 0x7f0a00b8
-			public const int txtUsuarioRecibido = 2131361976;
+			public const int txtMensaje = 2131361976;
+			
+			// aapt resource value: 0x7f0a00bc
+			public const int txtMensajeRecibido = 2131361980;
+			
+			// aapt resource value: 0x7f0a00b5
+			public const int txtUsuario = 2131361973;
+			
+			// aapt resource value: 0x7f0a00bb
+			public const int txtUsuarioRecibido = 2131361979;
 			
 			// aapt resource value: 0x7f0a0034
 			public const int uniform = 2131361844;
@@ -4093,8 +4105,8 @@ namespace UsoSQLite
 			// aapt resource value: 0x7f0a001b
 			public const int view_offset_helper = 2131361819;
 			
-			// aapt resource value: 0x7f0a00cd
-			public const int visible = 2131361997;
+			// aapt resource value: 0x7f0a00d0
+			public const int visible = 2131362000;
 			
 			// aapt resource value: 0x7f0a0043
 			public const int withText = 2131361859;
@@ -4340,94 +4352,97 @@ namespace UsoSQLite
 			public const int expand_button = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int MensajeEnviado = 2130968623;
+			public const int layout_detalle = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int MensajeRecibido = 2130968624;
+			public const int MensajeEnviado = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int mtrl_layout_snackbar = 2130968625;
+			public const int MensajeRecibido = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int mtrl_layout_snackbar_include = 2130968626;
+			public const int mtrl_layout_snackbar = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_action = 2130968627;
+			public const int mtrl_layout_snackbar_include = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_action_tombstone = 2130968628;
+			public const int notification_action = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_custom_big = 2130968629;
+			public const int notification_action_tombstone = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_icon_group = 2130968630;
+			public const int notification_template_custom_big = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_part_chronometer = 2130968631;
+			public const int notification_template_icon_group = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_part_time = 2130968632;
+			public const int notification_template_part_chronometer = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int preference = 2130968633;
+			public const int notification_template_part_time = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int preference_category = 2130968634;
+			public const int preference = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int preference_category_material = 2130968635;
+			public const int preference_category = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int preference_dialog_edittext = 2130968636;
+			public const int preference_category_material = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int preference_dropdown = 2130968637;
+			public const int preference_dialog_edittext = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int preference_dropdown_material = 2130968638;
+			public const int preference_dropdown = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int preference_information = 2130968639;
+			public const int preference_dropdown_material = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int preference_information_material = 2130968640;
+			public const int preference_information = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int preference_list_fragment = 2130968641;
+			public const int preference_information_material = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int preference_material = 2130968642;
+			public const int preference_list_fragment = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int preference_recyclerview = 2130968643;
+			public const int preference_material = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int preference_widget_checkbox = 2130968644;
+			public const int preference_recyclerview = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int preference_widget_seekbar = 2130968645;
+			public const int preference_widget_checkbox = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int preference_widget_seekbar_material = 2130968646;
+			public const int preference_widget_seekbar = 2130968646;
 			
 			// aapt resource value: 0x7f040047
-			public const int preference_widget_switch = 2130968647;
+			public const int preference_widget_seekbar_material = 2130968647;
 			
 			// aapt resource value: 0x7f040048
-			public const int preference_widget_switch_compat = 2130968648;
+			public const int preference_widget_switch = 2130968648;
 			
 			// aapt resource value: 0x7f040049
-			public const int select_dialog_item_material = 2130968649;
+			public const int preference_widget_switch_compat = 2130968649;
 			
 			// aapt resource value: 0x7f04004a
-			public const int select_dialog_multichoice_material = 2130968650;
+			public const int select_dialog_item_material = 2130968650;
 			
 			// aapt resource value: 0x7f04004b
-			public const int select_dialog_singlechoice_material = 2130968651;
+			public const int select_dialog_multichoice_material = 2130968651;
 			
 			// aapt resource value: 0x7f04004c
-			public const int support_simple_spinner_dropdown_item = 2130968652;
+			public const int select_dialog_singlechoice_material = 2130968652;
+			
+			// aapt resource value: 0x7f04004d
+			public const int support_simple_spinner_dropdown_item = 2130968653;
 			
 			static Layout()
 			{
@@ -4435,6 +4450,22 @@ namespace UsoSQLite
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f100000
+			public const int menu_chat = 2131755008;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}
