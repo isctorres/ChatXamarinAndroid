@@ -15,6 +15,7 @@ using Android.Content;
 using Android.Support.Design.Widget;
 using System;
 using Android.Views;
+using Newtonsoft.Json;
 
 namespace UsoSQLite
 {
@@ -40,6 +41,15 @@ namespace UsoSQLite
 
             // Instanciamos el objeto de las preferencias para poder recuperar los datos almacenados en las preferencias
             preferences = GetSharedPreferences("PreferenciasUsuario", Android.Content.FileCreationMode.Private);
+
+            // INICIAMOS LA CONEXION CON EL SERVIDOR
+            WebSocketCliente.iniciarCliente("ws://192.168.0.18:8000", preferences.GetString("Usuario", "PiriGuapi"));
+            WebSocketCliente.myEventHandlerRecibirMensaje += (sender, e) =>
+            {
+                //mensajesRecibidos.Text += e.mensaje + "\n";
+                insMensajeRecibido(e.mensaje.usuario, e.mensaje.contenido);
+
+            };
 
             pathBaseDeDatos = Path.Combine(FilesDir.AbsolutePath, "mensajes.sqlite");
             lstMensajes = new List<Mensaje>();
@@ -77,6 +87,14 @@ namespace UsoSQLite
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
+            // NOTIFICAMOS AL SERVIDOR QUE SE TERMINARÁ LA CONEXION
+            Dictionary<string, string> dictionary = new Dictionary<string, string>{
+                {"type","evento"},
+                {"accion","salir"}
+            };
+            string jsonObj = JsonConvert.SerializeObject(dictionary, Formatting.Indented);
+            WebSocketCliente.enviarMensaje(jsonObj);
+
             Finish();
             return base.OnOptionsItemSelected(item);
         }
@@ -144,14 +162,51 @@ namespace UsoSQLite
                 {                                       // en la tabla Mensaje, para actualizar el chat
                     usuario = preferences.GetString("Usuario","PiriGuapi"),
                     mensaje = edtMensaje.Text,
+                    fecha = DateTime.Now,
                     recibido = false
                 };
 
+                // Insertamos el objeto de tipo mensaje creado previamente
+                if (connection.Insert(newMensaje) == 1)
+                {
+                    //CREAMOS EL DICCIONARIO CON LOS DATOS A ENVIAR COMO MENSAJE
+                    Dictionary<string, string> dictionary = new Dictionary<string, string>{
+                        {"type","mensaje"},
+                        {"contenido",edtMensaje.Text}
+                    };
+
+                    //SERIALIZAMOS EL DICCIONARIO
+                    string jsonObj = JsonConvert.SerializeObject(dictionary, Formatting.Indented);
+                    WebSocketCliente.enviarMensaje(jsonObj);
+                
+                }
                 edtMensaje.Text = "";                   // Limpiamos la caja de texto
-                connection.Insert(newMensaje);          // Insertamos el objeto de tipo mensaje creado previamente
                 lstMensajes = connection.Table<Mensaje>().ToList();     // Listamos todos los registros de la tabla
             }
             
+            ltvMensajes.Adapter = new AdaptadorMensaje(this, lstMensajes);
+            ltvMensajes.SetSelection(ltvMensajes.Adapter.Count - 1);
+            connection.Close();
+            connection.Dispose();
+        }
+
+        private void insMensajeRecibido(string usuario, string mensaje)
+        {
+            SQLiteConnection connection = new SQLiteConnection(pathBaseDeDatos);
+            using (connection)
+            {
+                Mensaje newMensaje = new Mensaje        // Construimos el objeto de tipo mensaje que insertaremos
+                {                                       // en la tabla Mensaje, para actualizar el chat
+                    usuario = usuario,
+                    mensaje = mensaje,
+                    fecha = DateTime.Now,
+                    recibido = true
+                };
+
+                connection.Insert(newMensaje);
+                lstMensajes = connection.Table<Mensaje>().ToList();     // Listamos todos los registros de la tabla
+            }
+
             ltvMensajes.Adapter = new AdaptadorMensaje(this, lstMensajes);
             ltvMensajes.SetSelection(ltvMensajes.Adapter.Count - 1);
             connection.Close();

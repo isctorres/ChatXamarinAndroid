@@ -61,10 +61,12 @@
     <Compile Include="DetalleMensajeFragment.cs" />
     <Compile Include="Inicio.cs" />
     <Compile Include="AdaptadorMensaje.cs" />
+    <Compile Include="IRecibirMensaje.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Mensaje.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebSocketCliente.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
